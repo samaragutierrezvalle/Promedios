@@ -1,0 +1,11 @@
+import Menu.Menu;
+import UlDatos.Arrays;
+
+public class main {
+    public static void main(String[] args) {
+        Arrays.datos();
+        Arrays.cal();
+        Menu.showMenu();
+    }
+
+}
