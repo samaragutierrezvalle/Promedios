@@ -1,0 +1,45 @@
+package Menu;
+
+import UlDatos.Arrays;
+
+import java.util.Scanner;
+
+public class Menu {
+
+        public static void showMenu(){
+            System.out.println("Bienvenido a la consulta de calificasiones");
+            System.out.println("Selcciona alguande las obciones del menu");
+
+            int num =0;
+
+            do {
+                System.out.println("*************************************** MENU INICIAL ***************************************");
+                System.out.println();
+                System.out.println("Ver el oromedio de la clase. Precione 1 ");
+                System.out.println("Ver el promedio de los primeros 5, Precione 2  ");
+                System.out.println("Ver el promedio de los ultimos 5, Precione 3");
+                System.out.println("Salir: Precione 0");
+
+                Scanner leer = new Scanner(System.in);
+                num = Integer.valueOf(leer.nextLine());
+
+                switch (num){
+                    case 1:
+                        Arrays.Prom();
+                        break;
+                    case 2:
+                        Arrays.Prom2();
+                        break;
+                    case 3:
+                        Arrays.Prom3();
+                        break;
+                    case 0:
+                        break;
+                    default:
+                        System.out.println("Preione un boton valido");
+                }
+            }while (num !=0);
+            System.out.println("Bye");
+        }
+    }
+
