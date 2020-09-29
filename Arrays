@@ -1,0 +1,71 @@
+package UlDatos;
+
+import java.util.Scanner;
+
+public class Arrays {
+    static int calificasion ;
+    static String[] alumno = new String[15];
+    static Scanner leer = new Scanner(System.in);
+
+
+    public static void datos() {
+        alumno[0] = "Acebedo campos Ariagna";
+        alumno[1] = "Ambrocio Perez Michael Haziel";
+        alumno[2] = "Ambrocio Hernandez Vianey Celerina ";
+        alumno[3] = "Campos Casanero Juan Pablo";
+        alumno[4] = "Diaz De Jesus Mariana Dazzling";
+        alumno[5] = "Dias Rosas Alexis Efren";
+        alumno[6] = "Domingues Cazales Jennifer Irlanda";
+        alumno[7] = "Eligio Ramos Monserrat";
+        alumno[8] = "Flores Maldonado Liliana";
+        alumno[9] = "Gomez Aragon Edgar Omar";
+        alumno[10] = "Gutierres Valle Samara";
+        alumno[11] = "Juarez Ramos Alexis Manuel";
+        alumno[12] = "Leyva Silva Rogelio Jesus";
+        alumno[13] = "Martinez de los santos Isabel";
+        alumno[14] = "Martinez Rayo Iris Madal";
+
+
+    }
+
+    public static void cal() {
+        for (int i = 0; i < alumno.length; i++) {
+            System.out.println("Inserte la calificasion: " + alumno[i]);
+             alumno[i] = leer.nextLine();
+        }
+    }
+
+    public static void Prom() {
+        double total =0.0;
+        for (int i = 0; i <alumno.length ; i++) {
+           double prom = Double.parseDouble(alumno[i]);
+            total = total + prom;
+        }
+        total = total / alumno.length;
+        System.out.println(total);
+    }
+
+    public static void Prom2 (){
+        double total2 = 0;
+        double prom;
+        for (int i = 0; i < 5 ; i++) {
+           prom = Double.parseDouble(alumno[i]);
+           total2 = total2 + prom;
+        }
+        total2 = total2/5;
+        System.out.println(total2);
+    }
+    
+    public static void Prom3(){
+        double total3 = 0;
+        double prom;
+        for (int i = 10; i < 15; i++) {
+            prom = Double.parseDouble(alumno[i]);
+            total3 = total3 +prom;
+        }
+        total3 = total3/5;
+        System.out.println(total3 );
+    }
+}
+
+
